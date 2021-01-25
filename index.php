@@ -52,7 +52,7 @@ if(file_exists("config.php")){
         Dev: Jacob Sammon (jacobsammon.com)
         -->
         <div class="container ty-2">
-            <h1 class="text-center display-3 title-x"><?= $site_title ?></h1>
+            <h1 class="text-center display-3 mb-0 title-x"><?= $site_title ?></h1>
             <p class="text-center lead"><?= $site_short_disc ?></p>
             <hr class="hr-1">
         </div>
