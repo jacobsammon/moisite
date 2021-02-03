@@ -9,16 +9,16 @@ if(isset($_POST['makeconfig'])){
 // Credits to Jacob Sammon (jacobsammon.com)
 // Docs and More: jacobsammon.com/moisite/
 unlink('makemoisite.php');
-\$site_title = \"$_POST[name]\";
-\$site_short_disc =  \"$_POST[tagline]\";
-\$site_profile_img = \"$_POST[img]\";
-\$main_disc = \"$_POST[bio]\";
-\$email = \"$_POST[eml]\";
-\$twitter_username = \"$_POST[twitter]\";
-\$instagram_username = \"$_POST[instagram]\";
-\$twitter = $_POST[entwi];
-\$instagram = $_POST[enins];
-\$contact_section = $_POST[encon];
+\$site_title = htmlspecialchars(\"$_POST[name]\");
+\$site_short_disc =  htmlspecialchars(\"$_POST[tagline]\");
+\$site_profile_img = htmlspecialchars(\"$_POST[img]\");
+\$main_disc = htmlspecialchars(\"$_POST[bio]\");
+\$email = htmlspecialchars(\"$_POST[eml]\");
+\$twitter_username = htmlspecialchars(\"$_POST[twitter]\");
+\$instagram_username = htmlspecialchars(\"$_POST[instagram]\");
+\$twitter = htmlspecialchars($_POST[entwi]);
+\$instagram = htmlspecialchars($_POST[enins]);
+\$contact_section = htmlspecialchars($_POST[encon]);
 ?>";
     fwrite($cf_file, $content);
     fclose($cf_file);
